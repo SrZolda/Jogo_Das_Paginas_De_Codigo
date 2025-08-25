@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5djfsm4d06ul"]
+
+[ext_resource type="Texture2D" uid="uid://ct7uq4bi7rha8" path="res://icon.svg" id="1_5sgrm"]
+[ext_resource type="Script" uid="uid://n71ypgeei1qk" path="res://Cenas/pilha_de_p_cs.gd" id="1_tcc6j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tkv03"]
+size = Vector2(127, 128)
+
+[node name="Pilha de PCs" type="Area2D"]
+script = ExtResource("1_tcc6j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5sgrm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_tkv03")
+
+[node name="Título" type="Label" parent="."]
+offset_left = -70.0
+offset_top = -103.0
+offset_right = 71.0
+offset_bottom = -80.0
+text = "Páginas de Código"
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
