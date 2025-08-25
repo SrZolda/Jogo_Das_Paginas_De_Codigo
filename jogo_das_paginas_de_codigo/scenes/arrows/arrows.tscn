@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://hfiows0kijac"]
+
+[ext_resource type="Script" uid="uid://dqr7rm67vdcf3" path="res://scenes/arrows/arrows.gd" id="1_fa1i8"]
+
+[node name="Arrows" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_fa1i8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)

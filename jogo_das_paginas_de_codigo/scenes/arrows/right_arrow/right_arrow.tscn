@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://xxku2l6p1vom"]
+
+[ext_resource type="PackedScene" uid="uid://hfiows0kijac" path="res://scenes/arrows/arrows.tscn" id="1_264qh"]
+[ext_resource type="Texture2D" uid="uid://cf6ngwjvx6vx0" path="res://assets/Setas/seta direita.png" id="2_exvp4"]
+
+[node name="RightArrow" instance=ExtResource("1_264qh")]
+is_right = true
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_exvp4")

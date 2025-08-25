@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://bpvlvyuljwxbu" path="res://Cenas/pcf_completar_fase.tscn" id="1_q4qsu"]
 [ext_resource type="PackedScene" uid="uid://b5djfsm4d06ul" path="res://Cenas/pilha_de_p_cs.tscn" id="2_isiug"]
-[ext_resource type="Texture2D" uid="uid://c8onki7eewh5r" path="res://barra base.png" id="3_r8678"]
-[ext_resource type="Texture2D" uid="uid://1yplgid0b8tn" path="res://barra progresso.png" id="4_tgbm0"]
+[ext_resource type="Texture2D" uid="uid://c8onki7eewh5r" path="res://assets/barra base.png" id="3_r8678"]
+[ext_resource type="Texture2D" uid="uid://1yplgid0b8tn" path="res://assets/barra progresso.png" id="4_tgbm0"]
 [ext_resource type="PackedScene" uid="uid://cpffei02wx8pu" path="res://Cenas/pilha_pcs.tscn" id="5_tgbm0"]
 
 [node name="Cena Principal" type="Node2D"]

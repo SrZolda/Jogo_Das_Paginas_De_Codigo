@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8onki7eewh5r"
-path="res://.godot/imported/barra base.png-a1f746cea8e1efe1a6ef10bd32a7d28a.ctex"
+uid="uid://de1460rjx53op"
+path="res://.godot/imported/seta esquerda apagada.png-a240109f76a2c5052e2ac43baf17b67a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://barra base.png"
-dest_files=["res://.godot/imported/barra base.png-a1f746cea8e1efe1a6ef10bd32a7d28a.ctex"]
+source_file="res://assets/Setas/seta esquerda apagada.png"
+dest_files=["res://.godot/imported/seta esquerda apagada.png-a240109f76a2c5052e2ac43baf17b67a.ctex"]
 
 [params]
 

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnp0lcncsailh"]
+
+[ext_resource type="PackedScene" uid="uid://hfiows0kijac" path="res://scenes/arrows/arrows.tscn" id="1_l47b6"]
+[ext_resource type="Texture2D" uid="uid://br6mg34fhsmnt" path="res://assets/Setas/seta baixo.png" id="2_cphev"]
+
+[node name="DownArrow" instance=ExtResource("1_l47b6")]
+is_down = true
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_cphev")

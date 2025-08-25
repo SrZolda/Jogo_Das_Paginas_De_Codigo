@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bomkospeps3cw"]
+
+[ext_resource type="PackedScene" uid="uid://hfiows0kijac" path="res://scenes/arrows/arrows.tscn" id="1_f8mta"]
+[ext_resource type="Texture2D" uid="uid://qduasgwoibn6" path="res://assets/Setas/seta esquerda.png" id="2_jg2ql"]
+
+[node name="LeftArrow" instance=ExtResource("1_f8mta")]
+is_left = true
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_jg2ql")

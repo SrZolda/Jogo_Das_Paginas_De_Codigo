@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1jbqoq0p1he7"]
+
+[ext_resource type="PackedScene" uid="uid://hfiows0kijac" path="res://scenes/arrows/arrows.tscn" id="1_v8xuy"]
+[ext_resource type="Texture2D" uid="uid://cdlfob3gs7a33" path="res://assets/Setas/seta cima.png" id="2_bvsph"]
+
+[node name="UpArrow" instance=ExtResource("1_v8xuy")]
+is_up = true
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_bvsph")

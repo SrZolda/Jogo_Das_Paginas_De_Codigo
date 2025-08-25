@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj4335teiyikp"
-path="res://.godot/imported/seta direita apagada.png-8170ec6517464c528a9a01ca0c00b92c.ctex"
+uid="uid://cg3ktx7kvfbgu"
+path="res://.godot/imported/apagado.png-2db392c9cebe83cdaa64bef93b072878.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Setas/seta direita apagada.png"
-dest_files=["res://.godot/imported/seta direita apagada.png-8170ec6517464c528a9a01ca0c00b92c.ctex"]
+source_file="res://assets/Setas/apagado.png"
+dest_files=["res://.godot/imported/apagado.png-2db392c9cebe83cdaa64bef93b072878.ctex"]
 
 [params]
 

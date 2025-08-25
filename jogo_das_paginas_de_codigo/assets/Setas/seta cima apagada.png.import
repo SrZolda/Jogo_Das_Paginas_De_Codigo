@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br6mg34fhsmnt"
-path="res://.godot/imported/seta baixo.png-cb9ebc56292087febc872ffd7375df59.ctex"
+uid="uid://h2hfateqjud7"
+path="res://.godot/imported/seta cima apagada.png-73261c89c518629782c1c272479eaa55.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Setas/seta baixo.png"
-dest_files=["res://.godot/imported/seta baixo.png-cb9ebc56292087febc872ffd7375df59.ctex"]
+source_file="res://assets/Setas/seta cima apagada.png"
+dest_files=["res://.godot/imported/seta cima apagada.png-73261c89c518629782c1c272479eaa55.ctex"]
 
 [params]
 

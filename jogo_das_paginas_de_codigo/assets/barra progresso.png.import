@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qduasgwoibn6"
-path="res://.godot/imported/seta esquerda.png-c7c67a59280df3835ba519c46ae1d601.ctex"
+uid="uid://1yplgid0b8tn"
+path="res://.godot/imported/barra progresso.png-e43db0d8a043d1b62d786a5710c9728c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Setas/seta esquerda.png"
-dest_files=["res://.godot/imported/seta esquerda.png-c7c67a59280df3835ba519c46ae1d601.ctex"]
+source_file="res://assets/barra progresso.png"
+dest_files=["res://.godot/imported/barra progresso.png-e43db0d8a043d1b62d786a5710c9728c.ctex"]
 
 [params]
 
