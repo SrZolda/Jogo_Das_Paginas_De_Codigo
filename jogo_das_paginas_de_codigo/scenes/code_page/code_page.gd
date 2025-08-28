@@ -12,7 +12,7 @@ var current_layer: HBoxContainer
 
 var arrows = []
 @export var arrow_quantity: int = 6
-@export var max_layer_lenght: int = 6
+@export var layer_lenght: int = 6
 var current_index: int = 0
 var has_created_arrows: bool = false
 var can_active_next_key: bool = true
@@ -44,24 +44,28 @@ func inst_rand_arrow() -> void:
 func layer_to_inst(inst: Control) -> void:
 	if v_box_container.get_child_count() == 0:
 		inst_new_layer()
-	elif current_layer:
-		if current_layer.get_child_count() < max_layer_lenght:
+	
+	if current_layer:
+		if current_layer.get_child_count() < layer_lenght:
 			current_layer.add_child(inst)
-		elif current_layer.get_child_count() == max_layer_lenght:
+		if current_layer.get_child_count() == layer_lenght:
 			inst_new_layer()
 	
 func inst_new_layer() -> void:
-	var new_layer_inst = H_BOX_CONTAINER.instantiate()
-	current_layer = new_layer_inst
-	current_layer.add_theme_constant_override("separation", 124) ## TIVE Q USAR O CHATGPT AQUI, estou documentando o crime, current_layer.separation n fucionava :(
-	v_box_container.add_child(new_layer_inst)
+	current_layer = H_BOX_CONTAINER.instantiate()
+	current_layer.add_theme_constant_override("separation", 124) ## TIVE Q USAR O CHATGPT AQUI, estou documentando o crime, current_layer.separation n fucionava :( e n tinha nada na documentão
+	v_box_container.add_child(current_layer)
 	
-func how_many_arrows(_arrow_quantity: int = 6) -> void:
+func how_many_arrows(_arrow_quantity: int = 6, _layer_lenght: int = 6) -> void:
 	arrow_quantity = _arrow_quantity
+	layer_lenght = _layer_lenght
 	
 func on_next_key() -> void:
 	if current_index < arrows.size():
 		activate_arrow()
 		can_active_next_key = true
 		
-## fazer um sistema de, se passar de x setas, mandar pra camada de baixo do vbox, N MEXER NO SISTEMA DO ARRAY, fzendo esse esquema de só mudar a posiçâo q a seta e instanciada é o suficiente
+	if current_index == arrows.size():
+		SignalManager.has_finished_pc.emit()
+		queue_free()
+	

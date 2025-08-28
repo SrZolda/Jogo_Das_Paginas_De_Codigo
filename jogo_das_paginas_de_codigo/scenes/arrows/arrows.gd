@@ -28,7 +28,6 @@ func _process(delta: float) -> void:
 
 func controls() -> void:
 	if is_activate == true:
-		print("testeww")
 		if is_up == true:
 			if Input.is_action_just_pressed("up"):
 				after_input()
@@ -60,11 +59,9 @@ func controls() -> void:
 func after_input() -> void:
 	desactivate_arrow()
 	SignalManager.on_next_key.emit()
-	#queue_free()
 	
 func activate_arrow() -> void:
 	is_activate = true
-	print(is_activate)
 
 func desactivate_arrow() -> void:
 	is_activate = false

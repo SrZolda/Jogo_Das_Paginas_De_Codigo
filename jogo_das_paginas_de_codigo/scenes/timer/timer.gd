@@ -21,3 +21,4 @@ func _on_timer_timeout() -> void:
 		timer.start()
 	elif texture_progress_bar.value == texture_progress_bar.min_value:
 		pass
+		## fim de jogo

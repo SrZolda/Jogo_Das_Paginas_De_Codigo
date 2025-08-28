@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cvvn0fkdjvsyv"]
+[gd_scene load_steps=5 format=3 uid="uid://cvvn0fkdjvsyv"]
 
+[ext_resource type="Script" uid="uid://bt8temlmwiamk" path="res://levels/main_scene/main_scene.gd" id="1_cb0mp"]
 [ext_resource type="PackedScene" uid="uid://okdrxmc0oc7g" path="res://scenes/timer/timer.tscn" id="1_k5nll"]
 [ext_resource type="PackedScene" uid="uid://dqilgv6g0xj2k" path="res://scenes/complete_level/complete_level.tscn" id="2_dgle7"]
 [ext_resource type="PackedScene" uid="uid://b5djfsm4d06ul" path="res://scenes/pc_pages/pc_pages.tscn" id="3_jneet"]
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_cb0mp")
 
 [node name="Timer" parent="." instance=ExtResource("1_k5nll")]
 layout_mode = 1
@@ -30,3 +32,13 @@ grow_vertical = 2
 
 [node name="PCPages" parent="." instance=ExtResource("3_jneet")]
 layout_mode = 1
+
+[node name="PCPagesContainer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
