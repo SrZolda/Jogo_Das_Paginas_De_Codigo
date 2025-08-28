@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://okdrxmc0oc7g"]
+
+[ext_resource type="Script" uid="uid://ihii05jct2ac" path="res://scenes/timer/timer.gd" id="1_ortn8"]
+[ext_resource type="Texture2D" uid="uid://c8onki7eewh5r" path="res://assets/barra base.png" id="1_v5hgc"]
+[ext_resource type="Texture2D" uid="uid://1yplgid0b8tn" path="res://assets/barra progresso.png" id="2_ortn8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v5hgc"]
+font_size = 48
+
+[node name="Timer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_ortn8")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+offset_right = 1750.0
+offset_bottom = 140.0
+scale = Vector2(0.3, 0.3)
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 48
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Tempo Restante"
+label_settings = SubResource("LabelSettings_v5hgc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+value = 100.0
+texture_under = ExtResource("1_v5hgc")
+texture_progress = ExtResource("2_ortn8")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

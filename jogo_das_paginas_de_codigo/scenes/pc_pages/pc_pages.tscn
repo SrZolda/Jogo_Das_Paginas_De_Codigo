@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5djfsm4d06ul"]
+
+[ext_resource type="Texture2D" uid="uid://ct7uq4bi7rha8" path="res://icon.svg" id="1_5sgrm"]
+[ext_resource type="Script" uid="uid://b7ubgc1a545ns" path="res://scenes/pc_pages/pc_pages.gd" id="1_slr4n"]
+
+[node name="PCPages" type="Control"]
+layout_mode = 3
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+grow_vertical = 2
+script = ExtResource("1_slr4n")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 48
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_5sgrm")
+stretch_mode = 3
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Páginas 
+de 
+Código"
+
+[node name="CodePage" type="Node2D" parent="."]
+
+[connection signal="button_down" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_button_down"]

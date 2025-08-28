@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Jogo_Das_Paginas_De_Codigo"
-run/main_scene="uid://bss1qvnqqm6vk"
+run/main_scene="uid://cvvn0fkdjvsyv"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
