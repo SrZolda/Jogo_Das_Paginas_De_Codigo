@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://brqnoy5qrwrmd"]
+
+[ext_resource type="Script" uid="uid://butocw7orsyb8" path="res://scenes/wall/wall.gd" id="1_1d3bp"]
+[ext_resource type="Texture2D" uid="uid://bolg5icddxiwa" path="res://assets/wall/dog1.jpeg" id="3_xqidk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1d3bp"]
+size = Vector2(203, 199)
+
+[node name="Wall" type="Area2D"]
+script = ExtResource("1_1d3bp")
+image = ExtResource("3_xqidk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -1.5)
+shape = SubResource("RectangleShape2D_1d3bp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_2d_area_exited"]

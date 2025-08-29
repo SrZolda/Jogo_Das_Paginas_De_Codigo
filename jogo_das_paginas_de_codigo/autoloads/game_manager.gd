@@ -1,11 +1,17 @@
 extends Node
 
-
-# Called when the node enters the scene tree for the first time.
+var has_instantiated_pc_page: bool = false
+func get_has_instantiated_pc_page() -> bool:
+	return has_instantiated_pc_page
+func set_has_instantiated_pc_page(value: bool) -> void:
+	has_instantiated_pc_page = value
+	
 func _ready() -> void:
-	pass # Replace with function body.
+	SignalManager.has_finished_pc.connect(has_finished_pc)
+	SignalManager.on_create_new_pc.connect(on_create_new_pc)
+	
+func on_create_new_pc() -> void:
+	set_has_instantiated_pc_page(true)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func has_finished_pc() -> void:
+	set_has_instantiated_pc_page(false)

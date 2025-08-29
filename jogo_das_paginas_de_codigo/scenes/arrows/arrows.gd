@@ -30,35 +30,40 @@ func controls() -> void:
 	if is_activate == true:
 		if is_up == true:
 			if Input.is_action_just_pressed("up"):
-				after_input()
-			elif Input.is_action_just_pressed("down") or Input.is_action_just_pressed("left") or Input.is_action_just_pressed("right"):
+				after_input_correct()
 				sprite_2d.texture = SETA_CIMA_APAGADA
-				after_input()
+			elif Input.is_action_just_pressed("down") or Input.is_action_just_pressed("left") or Input.is_action_just_pressed("right"):
+				after_input_incorrect()
 			
 		if is_down == true:
 			if Input.is_action_just_pressed("down"):
-				after_input()
-			elif Input.is_action_just_pressed("up") or Input.is_action_just_pressed("left") or Input.is_action_just_pressed("right"):
+				after_input_correct()
 				sprite_2d.texture = SETA_BAIXO_APAGADA
-				after_input()
+			elif Input.is_action_just_pressed("up") or Input.is_action_just_pressed("left") or Input.is_action_just_pressed("right"):
+				after_input_incorrect()
 			
 		if is_left == true:
 			if Input.is_action_just_pressed("left"):
-				after_input()
-			elif Input.is_action_just_pressed("up") or Input.is_action_just_pressed("down") or Input.is_action_just_pressed("right"):
+				after_input_correct()
 				sprite_2d.texture = SETA_ESQUERDA_APAGADA
-				after_input()
+			elif Input.is_action_just_pressed("up") or Input.is_action_just_pressed("down") or Input.is_action_just_pressed("right"):
+				after_input_incorrect()
 			
 		if is_right == true:
 			if Input.is_action_just_pressed("right"):
-				after_input()
-			elif Input.is_action_just_pressed("down") or Input.is_action_just_pressed("left") or Input.is_action_just_pressed("up"):
+				after_input_correct()
 				sprite_2d.texture = SETA_DIREITA_APAGADA
-				after_input()
+			elif Input.is_action_just_pressed("down") or Input.is_action_just_pressed("left") or Input.is_action_just_pressed("up"):
+				after_input_incorrect()
 	
-func after_input() -> void:
+func after_input_correct() -> void:
 	desactivate_arrow()
+	SignalManager.on_correct_key.emit()
 	SignalManager.on_next_key.emit()
+
+func after_input_incorrect() -> void:
+	desactivate_arrow()
+	SignalManager.on_incorrect_key.emit()
 	
 func activate_arrow() -> void:
 	is_activate = true

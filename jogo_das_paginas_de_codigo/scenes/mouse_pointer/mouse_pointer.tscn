@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://d02bwi8tiuptm"]
+
+[ext_resource type="Script" uid="uid://d28lscy2olpd4" path="res://scenes/mouse_pointer/mouse_pointer.gd" id="1_olww4"]
+[ext_resource type="Texture2D" uid="uid://bq7xmpspbpt4n" path="res://assets/spray/spray_temp.png" id="2_q7eub"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2ks1u"]
+radius = 6.0
+height = 26.0
+
+[node name="MousePointer" type="Area2D" groups=["Pointer"]]
+script = ExtResource("1_olww4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_2ks1u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_q7eub")

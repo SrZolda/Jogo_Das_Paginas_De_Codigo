@@ -19,6 +19,7 @@ var can_active_next_key: bool = true
 
 func _ready() -> void:
 	SignalManager.on_next_key.connect(on_next_key)
+	SignalManager.on_incorrect_key.connect(on_incorrect_key)
 
 func _process(delta: float) -> void:
 	create_arrows()
@@ -66,6 +67,10 @@ func on_next_key() -> void:
 		can_active_next_key = true
 		
 	if current_index == arrows.size():
+		SignalManager.on_has_finished_successfully_pc.emit()
 		SignalManager.has_finished_pc.emit()
 		queue_free()
-	
+
+func on_incorrect_key() -> void:
+	SignalManager.has_finished_pc.emit()
+	queue_free()
