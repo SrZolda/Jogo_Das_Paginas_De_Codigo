@@ -10,7 +10,7 @@ func _ready() -> void:
 	SignalManager.has_finished_pc.connect(has_finished_pc)
 	SignalManager.on_create_new_pc.connect(on_create_new_pc)
 	
-func on_create_new_pc() -> void:
+func on_create_new_pc(area2d: Area2D) -> void:
 	set_has_instantiated_pc_page(true)
 
 func has_finished_pc() -> void:

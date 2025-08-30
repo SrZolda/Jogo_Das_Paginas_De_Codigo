@@ -15,11 +15,10 @@ func _process(delta: float) -> void:
 func click() -> void:
 	if can_click == true and GameManager.get_has_instantiated_pc_page() == false:
 		if Input.is_action_just_pressed("click"):
-			SignalManager.on_create_new_pc.emit(self) ###ARRUMAR LOGO
+			SignalManager.on_create_new_pc.emit(self)
 			
 func on_has_finished_successfully_pc() -> void:
 	change_to_correct_image()
-	## + algum codigo para o sistema de nivel 
 	set_process(false)
 
 func change_to_correct_image() -> void:

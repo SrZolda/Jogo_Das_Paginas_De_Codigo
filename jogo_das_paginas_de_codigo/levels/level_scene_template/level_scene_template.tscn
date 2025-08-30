@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://cvvn0fkdjvsyv"]
+
+[ext_resource type="Script" uid="uid://bt8temlmwiamk" path="res://levels/level_scene_template/level_scene_template.gd" id="1_oibpb"]
+[ext_resource type="PackedScene" uid="uid://brqnoy5qrwrmd" path="res://scenes/wall/wall.tscn" id="2_k7gud"]
+[ext_resource type="Texture2D" uid="uid://6v54l87thris" path="res://assets/wall/blank_wall.png" id="3_wr4e3"]
+[ext_resource type="Texture2D" uid="uid://cwo2xqa8t66tq" path="res://assets/wall/images.jpeg" id="4_1mmg1"]
+[ext_resource type="PackedScene" uid="uid://d02bwi8tiuptm" path="res://scenes/mouse_pointer/mouse_pointer.tscn" id="5_6bycu"]
+[ext_resource type="PackedScene" uid="uid://y5f7l582mohr" path="res://scenes/status/status.tscn" id="6_tebq0"]
+[ext_resource type="PackedScene" uid="uid://dqilgv6g0xj2k" path="res://scenes/complete_level/complete_level.tscn" id="7_8vc2g"]
+[ext_resource type="PackedScene" uid="uid://okdrxmc0oc7g" path="res://scenes/timer/timer.tscn" id="8_j536u"]
+
+[node name="LevelSceneTemplate" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oibpb")
+
+[node name="NotCanvas" type="Node2D" parent="."]
+
+[node name="WallHolder" type="Node2D" parent="NotCanvas"]
+
+[node name="Wall" parent="NotCanvas/WallHolder" instance=ExtResource("2_k7gud")]
+position = Vector2(385, 379)
+blank_image = ExtResource("3_wr4e3")
+
+[node name="Wall2" parent="NotCanvas/WallHolder" instance=ExtResource("2_k7gud")]
+position = Vector2(854, 379)
+blank_image = ExtResource("3_wr4e3")
+image = ExtResource("4_1mmg1")
+
+[node name="MousePointer" parent="NotCanvas" instance=ExtResource("5_6bycu")]
+position = Vector2(565, 295)
+
+[node name="Status" parent="." instance=ExtResource("6_tebq0")]
+layout_mode = 1
+
+[node name="Timer" parent="." instance=ExtResource("8_j536u")]
+layout_mode = 1
+
+[node name="PCPagesContainer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CompleteLevel" parent="." instance=ExtResource("7_8vc2g")]
+layout_mode = 1
