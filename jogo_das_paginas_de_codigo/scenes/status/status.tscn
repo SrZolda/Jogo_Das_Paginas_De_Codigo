@@ -1,4 +1,9 @@
-[gd_scene format=3 uid="uid://y5f7l582mohr"]
+[gd_scene load_steps=3 format=3 uid="uid://y5f7l582mohr"]
+
+[ext_resource type="Script" uid="uid://ce8bd6uidx7nu" path="res://scenes/status/status.gd" id="1_6p6t4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6p6t4"]
+font_size = 24
 
 [node name="Status" type="Control"]
 layout_mode = 3
@@ -7,18 +12,22 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6p6t4")
 
-[node name="PointsLabel" type="Label" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -133.0
+offset_bottom = 130.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 48
 
-[node name="MinPointsLabel" type="Label" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-
-[node name="ExtraPointsLabel" type="Label" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="WallCountLabel" type="Label" parent="MarginContainer"]
+layout_mode = 2
+text = "0/0"
+label_settings = SubResource("LabelSettings_6p6t4")
