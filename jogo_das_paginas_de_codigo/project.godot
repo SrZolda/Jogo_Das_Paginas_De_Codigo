@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 SignalManager="*res://autoloads/signal_manager.gd"
 GameManager="*res://autoloads/game_manager.gd"
 
+[display]
+
+window/size/viewport_height=765
+
 [global_group]
 
 Pointer=""
