@@ -1,9 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://cvvn0fkdjvsyv"]
+[gd_scene load_steps=6 format=3 uid="uid://cvvn0fkdjvsyv"]
 
 [ext_resource type="Script" uid="uid://bt8temlmwiamk" path="res://levels/level_scene_template/level_scene_template.gd" id="1_oibpb"]
-[ext_resource type="PackedScene" uid="uid://brqnoy5qrwrmd" path="res://scenes/wall/wall.tscn" id="2_k7gud"]
-[ext_resource type="Texture2D" uid="uid://6v54l87thris" path="res://assets/wall/blank_wall.png" id="3_wr4e3"]
-[ext_resource type="Texture2D" uid="uid://cwo2xqa8t66tq" path="res://assets/wall/images.jpeg" id="4_1mmg1"]
 [ext_resource type="PackedScene" uid="uid://d02bwi8tiuptm" path="res://scenes/mouse_pointer/mouse_pointer.tscn" id="5_6bycu"]
 [ext_resource type="PackedScene" uid="uid://y5f7l582mohr" path="res://scenes/status/status.tscn" id="6_tebq0"]
 [ext_resource type="PackedScene" uid="uid://dqilgv6g0xj2k" path="res://scenes/complete_level/complete_level.tscn" id="7_8vc2g"]
@@ -20,16 +17,10 @@ script = ExtResource("1_oibpb")
 
 [node name="NotCanvas" type="Node2D" parent="."]
 
+[node name="BGSprite" type="Sprite2D" parent="NotCanvas"]
+centered = false
+
 [node name="WallHolder" type="Node2D" parent="NotCanvas"]
-
-[node name="Wall" parent="NotCanvas/WallHolder" instance=ExtResource("2_k7gud")]
-position = Vector2(385, 379)
-blank_image = ExtResource("3_wr4e3")
-
-[node name="Wall2" parent="NotCanvas/WallHolder" instance=ExtResource("2_k7gud")]
-position = Vector2(854, 379)
-blank_image = ExtResource("3_wr4e3")
-image = ExtResource("4_1mmg1")
 
 [node name="MousePointer" parent="NotCanvas" instance=ExtResource("5_6bycu")]
 position = Vector2(565, 295)
